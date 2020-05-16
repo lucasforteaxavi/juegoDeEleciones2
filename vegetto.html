@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Enorabuena has Ganado</h1>
+
+     <div id="botonesVideo" style="text-align:center">
+
+        <button onclick="playPause()">Play/Pause</button> 
+    </div>
+    
+        <div id="ContenedorVegetto" style="display: flex; width: 100%;" >
+        <video width="550px" height="400vh" autoplay  style="margin:auto;" id="videoVegetto">
+            <source src="multimedia/final-Kamehameha.mp4"  type="video/mp4">
+
+        </video>
+    </div>
+
+    
+
+
+
+
+    
+    <script>
+
+    var myVideo = document.getElementById("videoVegetto"); 
+
+    function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+    } 
+
+
+    </script>
+
+</body>
+</html>

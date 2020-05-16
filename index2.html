@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            background-color: black;
+        }
+        #contenedorSupremo{
+            background-color: skyblue;
+            max-width: 600px;
+            margin: 0 auto;
+            
+        }
+        #contenedorSupremo div{
+            width: 100%;
+        }
+        
+@media screen and (min-width:600px){
+    /* body{
+        width: auto;
+    } */
+    #contenedorSupremo{
+        max-width: 799px;
+        /* display: flex; */
+        /* flex-direction: column; */
+    }
+     div.contenedorCanciones{
+         width: 100%;
+     } 
+    
+     div.contenedorCanciones audio,table{
+        width: 100%;
+     }
+}
+
+@media screen and (min-width:800px){
+    /* body{
+        width: auto;
+    } */
+    #contenedorSupremo{ width: 100%;
+        /* width: auto; */
+        /* display: flex; */
+        /* flex-direction: column; */
+    }
+     div.contenedorCanciones{
+         width: 100%;
+     } 
+    
+     div.contenedorCanciones audio,table{
+        width: 100%;
+     }
+}
+
+
+
+    </style>
+     <link rel="stylesheet" href="estilo.css">
+     <script src="juegoElecciones.js"></script>
+
+
+
+</head>
+<body>
+    
+<div id="contenedorSupremo">
+
+        <!-- Menu para poner los codigos y te lleve a vegetto  -->
+        <div id="contenedorMenuHamburgesa">
+            <header id="header"> <button style="width: 8%; height: 15vh;" onclick="mostrar()"> <img
+                        src="multimedia/menuHamburgesa.png" alt="" style="width: 99%; height: 14vh;"></button>  <button onclick="location.reload()" style="float:right;">Ir al Inicio</button></header> 
+    
+        </div>
+        <!-- Ten cuidado pq he puesto en el id del input codigoGoku, despues no puedo reutilizar este id -->
+        <div id="buscadorVegetto" style="display: none;">
+            <p>Introduce los codigos correspondientes en este orden: Goku + Vegeta + Potara </p> <br>
+            <input type="text" name="veggeto" id="codigoGoku" placeholder="Introduce codigo Goku">
+            <input type="text" name="veggeto" id="codigoVegeta" placeholder="Introduce codigo Vegeta">
+            <input type="text" name="veggeto" id="codigoPotara" placeholder="Introduce codigo Potara">
+            <input type="submit" value="Aceptar" style="width: 5%;" onclick="victoria()">
+    
+        </div>
+    
+    
+        <div id="contenedorBotones">
+    
+            <button id="rojo" onclick="botonDelColorRojo()">Click </button>
+            <button id="amarillo" onclick="botonDelColorAmarillo()">Click </button>
+            <button id="azul" onclick="botonDelColorAzul()">Click </button>
+    
+    
+        </div>
+    
+        <br>
+        <!-- Contenedor de Canciones : Rojo, Amarillo y Azul -->
+    
+        <div id="contenedorCancionesRojo" class="contenedorCanciones">
+            <table>
+                <tr>
+    
+                    <th>
+                        <audio controls>
+    
+                            <source src="multimedia/Daddy Yankee & Snow - Con Calma (Video Oficial).mp3" type="audio/mp3"> Escucha 
+    
+                        </audio>
+    
+                    </th>
+                  
+                    <th>
+                        <audio controls>
+                            <source
+                                src="multimedia/OVER THE TOP - Hiroshi Kitadani  One Piece Opening 22 - Wano Kuni Arc (YTCONVERT.IN).mp3"
+                                type="audio/mp3">Escucha
+                        </audio>
+                    </th>
+    
+                    <th>
+                        <audio controls>
+                            <source
+                                src="multimedia/tonosmovil.net_shin_chan_opening_catala.mp3"
+                                type='audio/mp3'>Escucha
+                        </audio>
+                    </th>
+                   
+                </tr>
+    
+                <tr>
+                    
+                    <td><strong>Codigo: <p class="codigo">RGCC</p> </strong></td>
+    
+                    <td><strong>Codigo: <p class="codigo">OP22</p> </strong></td>
+    
+                    <td><strong>Codigo: <p class="codigo">SC1C</p> </strong></td>
+       
+    
+                </tr>
+            </table>
+    
+            <label for="introducirCodigo">Introduce el codigo de la cancion que quieras:</label> <input type="text"
+                placeholder="Introduce el codigo" name="introducirCodigo" id="codigoDelRojo"> <input type="submit" value="Ok"
+                onclick="respuestaCodigoRojo()">
+    
+    
+        </div>
+    
+        <div id="contenedorCancionesAmarillo" class="contenedorCanciones">
+    
+            <table>
+                <tr>
+                    <th>
+                        <audio controls>
+                            <source
+                                src="multimedia/Naruto Shippuden Opening 1 _ Hero's Come Back!! (HD) (320  kbps) (convertmp3.me).mp3"
+                                type='audio/mp3'>Escucha
+                        </audio>
+                    </th>
+                    <th>
+                        <audio controls>
+                            <source
+                                src="multimedia/Dragon Ball Super Opening 1 - Chouzetsu Dynamic.mp3"
+                                type="audio/mp3">Escucha
+                        </audio>
+                    </th>
+                    <th>
+                        <audio controls>
+    
+                            <source src="multimedia/What Does The Fox Say Ylvis - The Fox (official video +).mp3" type="audio/mp3"> Escucha 
+    
+                        </audio>
+    
+                    </th>
+                </tr>
+    
+                <tr>
+                    <td><strong>Codigo: <p class="codigo">NS01</p> </strong></td>
+    
+                    <td><strong>Codigo: <p class="codigo">DBS1</p> </strong></td>
+    
+                    <td><strong>Codigo: <p class="codigo">WTFS</p> </strong></td>
+    
+                </tr>
+            </table>
+    
+            <label for="introducirCodigo">Introduce el codigo de la cancion que quieras:</label> <input type="text"
+                placeholder="Introduce el codigo" name="introducirCodigo" id="codigoDelAmarillo"> <input type="submit" value="Ok"
+                onclick="respuestaCodigoAmarillo()">
+    
+    
+    
+    
+    
+    
+        </div>
+    
+        <div id="contenedorCancionesAzul" class="contenedorCanciones">
+    
+            <table>
+                <tr>
+                    <th>
+                        <audio controls>
+                            <source
+                                src="multimedia/Gangnam Style -.mp3"
+                                type='audio/mp3'>Escucha
+                        </audio>
+                    </th>
+                    <th>
+                        <audio controls>
+                            <source
+                                src="multimedia/Lady Gaga - Bad Romance (Official Music Video) (YTCONVERT.IN).mp3"
+                                type="audio/mp3">Escucha
+                        </audio>
+                    </th>
+                    <th>
+                        <audio controls>
+    
+                            <source src="multimedia/Callaíta - Bad Bunny (Video Oficial).mp3" type="audio/mp3"> Escucha 
+    
+                        </audio>
+    
+                    </th>
+                </tr>
+    
+                <tr>
+                    <td><strong>Codigo: <p class="codigo">GMSE</p> </strong></td>
+    
+                    <td><strong>Codigo: <p class="codigo">LGBR</p> </strong></td>
+    
+                    <td><strong>Codigo: <p class="codigo">RGEC</p> </strong></td>
+    
+                </tr>
+            </table>
+    
+            <label for="introducirCodigo">Introduce el codigo de la cancion que quieras:</label> <input type="text"
+                placeholder="Introduce el codigo" name="introducirCodigo" id="codigoDelAzul"> <input type="submit" value="Ok"
+                onclick="respuestaCodigoAzul()">
+    
+    
+    
+    
+    
+    
+        </div>
+    
+        <!-- Acertijos -->
+    
+        <div id="contenedorAcertijos">
+    
+    
+            <div id="acertijo1">
+    
+                <h1>Acertijo 1</h1>
+    
+                <h2>Asesinato en la mansion</h2>
+    
+                <p>El sr Calamardo vive en una mansion muy lujosa en la cual su habitacion tiene de todo menos ventanas,
+                    pero el tio lo preferia asi por que asi usaba su habitacion como cuarto oscuro (para fiestas o reunion
+                    con amigos).</p>
+                <p>Un Sabado por la mañana el Sr Calamardo fue asesinado en su habitacion con la puerta cerrada con llave.
+                    Se investigo el caso y interrogaron a los 4 sospechosos:</p>
+    
+                <ul>
+                    <li><strong>Paula</strong>, la empleada del hogar: <p>Iba a despertar al Sr Calamardo como siempre y
+                            cuando lo vi muerto grite</p>
+                    </li>
+    
+                    <li><strong>Jaime</strong>, el Mayordomo: <p>
+                            Cuando escuche el grito de Paula fuy corriendo al cuarto del Sr Calamardo, encendi la luz y vi
+                            al Sr Calamardo con 1 cuchillo clavado en el cuello
+                        </p>
+                    </li>
+    
+                    <li>
+                        <strong>Andrea</strong>, la Instritutriz (Professora personal): <p>Llegue corriendo junto a Jaime ,
+                            cuando él encendio la luz, la habitacion se vio toda llena de sangre</p>
+                    </li>
+    
+                    <li><strong>Jhon</strong>, el cocinero : <p>Estaba preparando el desayuno y no vi nada</p>
+                    </li>
+    
+    
+                </ul>
+    
+                <p>Quien és el Assesino?</p> <input type="text" name="respuesta" id="respuestaAcertijo1"> <input
+                    type="submit" value="Aceptar" onclick="resolverAcertijo1()">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            </div>
+    
+    
+            <div id="acertijo2">
+                <h1>Acertijo 2</h1>
+    
+                <h2>Ayanamiento y Destruccion</h2>
+    
+                <p>El Sr Perez estaba solo en su casa, hasta que de repente detecto un intruso en su casa, noto que algo
+                    caia en la salita de su esposa. Al entrar vi que la estatua favorita de mi mujer estaba rota en el suelo
+                    y vi como alguien salio corriendo por la puerta. Intente seguirlo, peró al salir a la calle con este
+                    clima tan frio se me empañaron las gafas y no podia ver, entonces el culpable se me escapo. </p>
+    
+                <p>El policia le dijo: Deje ya de mentir y digale a su mujer que fue usted quien rompio su estatua.</p>
+    
+                <p>La historia del señor perez es mentira? o él intruso se esta haciendo pasar por un policia</p>
+    
+                <select name="respuesta" id="respuestaAcertijo2">
+                    <option value="miente">El Sr Perez miente</option>
+                    <option value="El Sr Perez dice la Verdad, Por lo tanto el poli es un inspostor">El Sr Perez dice la
+                        Verdad, Por lo tanto el poli es un inspostor</option>
+    
+                </select>
+    
+    
+                <input type="submit" value="Aceptar" onclick="resolverAcertijo2()">
+    
+    
+    
+    
+    
+    
+    
+    
+            </div>
+    
+    
+            <div id="acertijo3">
+                <h1>Acertijo numero 3</h1>
+                <h2>La Princesa</h2>
+                <p>Paula és una princesa de 12 años que vive en lo alto de una torre y nunca havia salido de su cuarto. Un buen dia salio de su habitacion con el objetivo de salir a la caye, para ello debia de cruzar 1 puerta de las 4 siguientes. Solo 1 es la buena, si se equivoca morira. las puertas son:</p>
+    
+                <ol>
+                    <li>Una puerta la cual te conduce a un lugar lleno de lava donde derrite a cualquiera</li>
+    
+                    <li>Un asesino disfrazo de payaso (a lo IT) que golpearia a cualquier persona a muerte con un bate y cuchillo</li>
+    
+                    <li>Una helada mortal que la congelaria enseguida</li>
+    
+                    <li>Policias que dispararian a cualquier hombre o mujer Indiscriminadamente</li>
+    
+    
+                </ol>
+                <p>Que puerta deberia escoger Paula para salvarse?</p>
+    
+                <select name="respuesta" id="respuestaAcertijo3">
+                    <option value="1">Puerta 1</option>
+                    <option value="2">Puerta 2</option>
+                    <option value="3">Puerta 3</option>
+                    <option value="4">Puerta 4</option>
+    
+                </select>
+    
+                <input type="submit" value="Aceptar" onclick="resolverAcertijo3()">
+    
+    
+            </div>
+    
+            <div id="acertijo4">
+    
+    
+                <img src="/multimedia/jereogrifico-sudafrica.png" alt="">
+    
+                <div class="input">
+                    <input type="text" name="respuesta" id="respuestaAcertijo4" placeholder="Ecribe aqui tu Respuesta">
+        
+                    <input type="submit" value="Aceptar" onclick="resolverAcertijo4()">
+                </div>
+    
+    
+            </div>
+    
+            <div id="acertijo5">
+    
+                <h1>Acertijo 5</h1>
+                <h2>La edad de la Hermana</h2>
+    
+                <p>Cuando yo tenia 6 años, mi hermana tenia la mitad de mi edad. <br> Ahora tengo 50 años, ¿Cuantos años tiene mi hermana?</p> 
+    
+                <input type="text" name="respuesta" id="respuestaAcertijo5" placeholder="Ecribe aqui tu Respuesta">
+        
+                <input type="submit" value="Aceptar" onclick="resolverAcertijo5()">
+    
+    
+    
+    
+    
+    
+            </div>
+    
+    
+            <div id="acertijo6">
+    
+                <img src="multimedia/jereogrifico-laIslaMisteriosa.jpg" alt="jereogrifico">
+    
+                <input type="text" name="respuesta" id="respuestaAcertijo6" placeholder="Ecribe aqui tu Respuesta">
+        
+                <input type="submit" value="Aceptar" onclick="resolverAcertijo6()">
+    
+            </div>
+    
+    
+            <div id="acertijo7">
+    
+                <img src="multimedia/acertijos-mentales-resueltos-canicas.png" alt="jereogrifico">
+    
+               Canicas de Raul = <input type="text" name="respuesta" id="respuestaAcertijo7R" placeholder="Pon aqui el resultado de Raul">
+    
+                  Canicas de Jose =  <input type="text" name="respuesta" id="respuestaAcertijo7J" placeholder="Pon aqui el resultado de Jose">
+        
+                <input type="submit" value="Aceptar" onclick="resolverAcertijo7()">
+    
+            </div>
+    
+            <div id="acertijo8">
+    
+               <!-- Paris empieza con P y termina con T  --) opcion 1 -->
+               <!-- Como se escribe Durmiendo o Dormiendo ? -->
+    
+               <h1>Acertijo 8</h1>
+               <h2>Pregunta</h2>
+               <p>Como se escribe durmiendo o dormiendo?</p>
+    
+              <p style="display: inline;">Se escribe</p>  <input type="text" name="respuesta" id="respuestaAcertijo8" placeholder="Ecribe aqui tu Respuesta">  
+        
+                <input type="submit" value="Aceptar" onclick="resolverAcertijo8()">
+    
+            </div>
+    
+            <div id="acertijo9">
+                <h1>Acertijo 9</h1>
+    
+                <img src="multimedia/defc2170d97b0a3a17730809adf47bbb.jpg" alt="Acertijo">
+                <!-- La respuesta es 062 -->
+    
+                <input type="text" name="respuesta" id="respuestaAcertijo9" placeholder="Ecribe aqui tu Respuesta">
+        
+                <input type="submit" value="Aceptar" onclick="resolverAcertijo9()">
+    
+            </div>
+    
+    
+    
+    
+        </div>
+    
+    
+    
+    
+      
+    
+    
+        <div id="contenedorImagenes">
+    
+            <div id="luffy">
+                <h1>Luffy</h1>
+                <img src="multimedia/luffy-one-piece.jpg" alt="Aqui esta Luffy">
+            </div>
+            <div id="naruto">
+                <h1>Naruto</h1>
+                <img src="multimedia/naruto shippuden uzumaki.jpg" alt="Aqui esta Naruto">
+            </div>
+            <div id="pikachu">
+                <h1>Pikachu</h1>
+                <img src="multimedia/pikachu-saludando.jpg" alt="Aqui esta Pikachu">
+                <h2>Reto Pikachu</h2>
+                <p>Imita a Pikachu</p>
+            </div>
+            <div id="shinchan">
+                <h1>Shin Chan</h1>
+                <img src="multimedia/shin-chan.jpg" alt="Aqui esta Shin Chan">
+                <h2>Reto Shin Chan</h2>
+                <p>Imita a Shin Chan (Baile del culito culito)</p>
+            </div>
+    
+            <div id="goku">
+                <h1>Hola soy Goku</h1>
+                <img src="multimedia/goku1.jpg" alt="Aqui esta Goku" class="gokuMultimedia">
+                <img src="multimedia/gokuSSJ.gif" alt="Gif Goku" srcset="" class="gokuMultimedia">
+                <img src="multimedia/gokuSS1.jpg" alt="Goku" class="gokuMultimedia">
+    
+                <h2>Bien hecho, me has encontrado mi codigo es: <strong style="color: red;">KAKAGK</strong> </h2>
+                
+    
+            </div>
+    
+            <div id="potara">
+                <h1>Potara</h1>
+                <img src="multimedia/potara.png" alt="pendientes potara">
+                <h2>Bien hecho, me has encontrado mi codigo es: <strong style="color: green;">FUSPOT</strong> </h2>
+            </div>
+            
+            <div id="pikachu">
+                <h1>Pikachu</h1>
+                <img src="multimedia/pikachu-saludando.jpg" alt="Pikachu">
+                <h2>Reto Pikachu</h2>
+                <p>Imita a Pikachu</p>
+    
+            </div>
+            
+            <div id="doraemon">
+                <h1>Doraemon</h1>
+                <img src="multimedia/doraemon.jpg" alt="doraemon">
+            </div>
+    
+            <div id="wonderWoman">
+                <h1>Wonder Woman</h1>
+                <img src="/multimedia/wonder-woman-2017-1.webp" alt="">
+                <img src="/multimedia/854267.jpg" alt="Wonder Woman">
+                <img src="/multimedia/gifWonderWoman.gif" alt="">
+                <h2>Reto de Wonder Woman</h2>
+                <p>Hay que ponerse un vestido o una camiseta larga con un palo destras en la espalda (para simular una espada) y sacarla con elegancia y gramur al igual que Wonder Woman en la peli</p>
+    
+            </div>
+    
+            <div id="vegeta" class="vegetaMultimedia">
+                <h1>Vegeta</h1>
+                <img src="multimedia/vegeta.jpg" alt="">
+                <img src="multimedia/vegeta super sajan gif.gif" alt="">
+                <img src="multimedia/vegetaSSJ.png" alt="">
+                <h2>Enorabuena, me has encontrado. Mi codigo es : <span style="color: blue;">PRIVTA</span></h2>
+            </div>
+    
+    
+        </div>
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+</div>
+
+
+</body>
+</html>
